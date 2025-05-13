@@ -1,0 +1,105 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fff8f0;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #f8c291;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-style: italic;
+  color: #5d4037;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4e342e;
+  font-weight: bold;
+}
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #d84315;
+  border-bottom: 2px solid #ffe0b2;
+  padding-bottom: 5px;
+}
+
+main img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  color: #bf360c;
+}
+
+ul, ol {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main h2 {
+    font-size: 1.75rem;
+  }
+}
