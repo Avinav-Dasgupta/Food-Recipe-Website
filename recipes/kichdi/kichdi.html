@@ -3,33 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Kichdi | CookNest</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <header>
-    <h1>CookNest</h1>
+    <h1><u>CookNest</u></h1>
     <nav>
-      <a href="../index.html">Home</a>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../recipes.html">Recipes</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
     </nav>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+    </div>
   </header>
+
   <main>
     <h2>Kichdi</h2>
-    <img src="../images/kichdi.jpg" alt="Kichdi" width="400">
+    <div class="recipe-details">
+      <p><strong>Prep Time:</strong> 10 minutes</p>
+      <p><strong>Cook Time:</strong> 20 minutes</p>
+      <p><strong>Servings:</strong> 2-3</p>
+    </div>
+    <img src="kichdi.jpg" alt="Kichdi" width="400">
     <h3>Ingredients:</h3>
     <ul>
-      <li>1 cup rice</li>
-      <li>1/2 cup moong dal</li>
-      <li>1 chopped onion</li>
-      <li>1 chopped tomato</li>
-      <li>1/2 tsp turmeric, cumin, salt</li>
+      <li>1 cup basmati rice (or any short-grain rice)</li>
+      <li>1/2 cup yellow moong dal (split and skinned lentils)</li>
+      <li>1 medium onion, finely chopped</li>
+      <li>1 medium tomato, finely chopped</li>
+      <li>1/2 teaspoon turmeric powder</li>
+      <li>1 teaspoon cumin seeds</li>
+      <li>1/2 teaspoon mustard seeds</li>
+      <li>1/4 teaspoon asafoetida (hing)</li>
+      <li>1-2 green chilies, slit (optional)</li>
+      <li>1 inch ginger, grated (optional)</li>
+      <li>2 tablespoons ghee or oil</li>
+      <li>Salt to taste</li>
+      <li>3-4 cups water (adjust as needed)</li>
+      <li>Fresh coriander leaves, for garnish</li>
     </ul>
     <h3>Cooking Process:</h3>
     <ol>
-      <li>Wash rice and dal. Soak for 15 minutes.</li>
-      <li>In a cooker, heat ghee, add cumin, then onion and tomato.</li>
-      <li>Add soaked rice-dal, spices, and 3 cups water.</li>
-      <li>Pressure cook for 3–4 whistles. Serve hot.</li>
+      <li><strong>Wash and Soak:</strong> Wash the rice and moong dal thoroughly under running water. Soak them together in enough water for at least 15 minutes. This helps them cook faster and become softer.</li>
+      <li><strong>Sauté Aromatics:</strong> Heat ghee or oil in a pressure cooker or a heavy-bottomed pot over medium heat. Add cumin seeds and mustard seeds. Let them splutter.</li>
+      <li><strong>Add Onion and Ginger-Chili:</strong> Add the finely chopped onion and sauté until it turns light golden brown. If using, add the slit green chilies and grated ginger, and sauté for a minute.</li>
+      <li><strong>Add Tomato and Spices:</strong> Add the chopped tomato and cook until it softens. Stir in the turmeric powder and asafoetida. Cook for another minute.</li>
+      <li><strong>Add Rice and Dal:</strong> Drain the soaked rice and moong dal and add them to the cooker/pot. Sauté for a minute, stirring gently.</li>
+      <li><strong>Add Water and Salt:</strong> Add 3-4 cups of water (start with 3 and adjust based on your desired consistency). Add salt to taste.</li>
+      <li><strong>Pressure Cook (if using cooker):</strong> Close the lid of the pressure cooker and cook for 3-4 whistles on medium heat. Let the pressure release naturally.</li>
+      <li><strong>Cook in a Pot (if not using cooker):</strong> Bring the mixture to a boil, then reduce the heat to low, cover the pot, and simmer for 15-20 minutes, or until the rice and dal are cooked and the kichdi has reached your desired consistency. Stir occasionally to prevent sticking. Add more water if needed during cooking.</li>
+      <li><strong>Garnish and Serve:</strong> Once cooked, open the cooker/pot. Gently mash some of the kichdi with the back of a spoon for a smoother texture (optional). Garnish with fresh coriander leaves. Serve hot with ghee, yogurt, pickle, or papad.</li>
     </ol>
+
+    <div class="nutrition-facts">
+      <h4>Nutrition Facts (approx. per serving):</h4>
+      <ul>
+        <li>Calories: 250-300 kcal</li>
+        <li>Protein: 8-10g</li>
+        <li>Fat: 8-12g (depending on ghee/oil used)</li>
+        <li>Carbohydrates: 40-50g</li>
+        <li>Fiber: 5-7g</li>
+      </ul>
+    </div>
+
+    <br><hr>
+    <div class="comments-section">
+      <h4>Comments & Reviews</h4>
+      <div class="comment">
+        <p>Simple, comforting, and delicious! Perfect for a quick meal.</p>
+        <p class="author">- Neha Gupta</p>
+      </div>
+      <div class="comment">
+        <p>I added some vegetables like peas and carrots, and it turned out great!</p>
+        <p class="author">- Suresh Kumar</p>
+      </div>
+      </div>
   </main>
+  <script src="script.js"></script>
+
 </body>
 </html>

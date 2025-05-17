@@ -8,51 +8,67 @@
 </head>
 <body>
   <header>
-    <h1>CookNest</h1>
-    <p>Where every recipe finds a home.</p>
+    <h1><u>CookNest</u></h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="categories.html">Categories</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+        <div id="searchResults" class="search-results">
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <h2>Popular Recipes</h2>
-      <div class="recipe-grid">
-        <div class="recipe-card">
-          <img src="images/aaloo-parantha.jpg" alt="Aaloo Parantha">
-          <h3><a href="recipes/aaloo-parantha.html">Aaloo Parantha</a></h3>
+      <br>
+      <div class="recipe-grid" id="recipeGrid">
+
+        <div class="recipe-card" data-href="recipes/aloo-parantha/aaloo-parantha.html" data-title="aaloo parantha">
+          <div class="recipe-image-container">
+            <img src="recipes/aloo-parantha/aaloo-parantha.jpg" alt="Aaloo Parantha">
+          </div>
+          <h3>Aaloo Parantha</h3>
           <p>Stuffed flatbread made with spiced mashed potatoes. A North Indian classic!</p>
         </div>
 
-        <div class="recipe-card">
-          <img src="images/kichdi.jpg" alt="Kichdi">
-          <h3><a href="recipes/kichdi.html">Kichdi</a></h3>
+        <div class="recipe-card" data-href="recipes/kichdi/kichdi.html" data-title="kichdi">
+          <div class="recipe-image-container">
+            <img src="recipes/kichdi/kichdi.jpg" alt="Kichdi">
+          </div>
+          <h3>Kichdi</h3>
           <p>Comforting one-pot dish made from rice and lentils. Simple, healthy, and satisfying.</p>
         </div>
 
-        <div class="recipe-card">
-          <img src="images/veg-pulao.jpg" alt="Veg Pulao">
-          <h3><a href="recipes/veg-pulao.html">Veg Pulao</a></h3>
+        <div class="recipe-card" data-href="recipes/veg-pulao/veg-pulao.html" data-title="veg pulao">
+          <div class="recipe-image-container">
+            <img src="recipes/veg-pulao/veg-pulao.jpg" alt="Veg Pulao">
+          </div>
+          <h3>Veg Pulao</h3>
           <p>Fragrant rice cooked with colorful vegetables and spices. Perfect for any meal.</p>
         </div>
 
-        <div class="recipe-card">
-          <img src="images/mutton-curry.jpg" alt="Mutton Curry">
-          <h3><a href="recipes/mutton-curry.html">Mutton Curry</a></h3>
+        <div class="recipe-card" data-href="recipes/mutton-curry/mutton-curry.html" data-title="mutton curry">
+          <div class="recipe-image-container">
+            <img src="recipes/mutton-curry/mutton-curry.jpg" alt="Mutton Curry">
+          </div>
+          <h3>Mutton Curry</h3>
           <p>Rich and spicy curry made with tender pieces of mutton and aromatic spices.</p>
         </div>
 
-        <div class="recipe-card">
-          <img src="images/chicken-curry.jpg" alt="Chicken Curry">
-          <h3><a href="recipes/chicken-curry.html">Chicken Curry</a></h3>
+        <div class="recipe-card" data-href="recipes/chicken-curry/chicken-curry.html" data-title="chicken curry">
+          <div class="recipe-image-container">
+            <img src="recipes/chicken-curry/chicken-curry.jpg" alt="Chicken Curry">
+          </div>
+          <h3>Chicken Curry</h3>
           <p>Juicy chicken cooked in a flavorful gravy of onions, tomatoes, and Indian spices.</p>
         </div>
+
       </div>
     </section>
   </main>

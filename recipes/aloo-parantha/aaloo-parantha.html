@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Aaloo Parantha | CookNest</title>
-  <link rel="stylesheet" href="https://github.com/Avinav-Dasgupta/Food-Recipe-Website/blob/main/recipes/aloo-parantha/aalooParantha.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <header>
-    <h1>CookNest</h1>
-    <p>Where every recipe finds a home.</p>
+    <h1><u>CookNest</u></h1>
     <nav>
       <ul>
-        <li><a href="https://github.com/Avinav-Dasgupta/Food-Recipe-Website/blob/main/index.html">Home</a></li>
-        <li><a href="https://github.com/Avinav-Dasgupta/Food-Recipe-Website/blob/main/recipes.html">Recipes</a></li>
-        <li><a href="https://github.com/Avinav-Dasgupta/Food-Recipe-Website/blob/main/categories.html">Categories</a></li>
-        <li><a href="https://github.com/Avinav-Dasgupta/Food-Recipe-Website/blob/main/contact.html">Contact</a></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../recipes.html">Recipes</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+    </div>
   </header>
 
   <main>
     <h2>Aaloo Parantha</h2>
-    <img src="https://github.com/Avinav-Dasgupta/Food-Recipe-Website/blob/main/recipes/aloo-parantha/aaloo-parantha.jpg" alt="Aaloo Parantha" width="400">
+    <div class="recipe-details">
+      <p><strong>Prep Time:</strong> 20 minutes</p>
+      <p><strong>Cook Time:</strong> 25 minutes</p>
+      <p><strong>Servings:</strong> 4</p>
+    </div>
+    <img src="aaloo-parantha.jpg" alt="Aaloo Parantha" width="400">
     <h3>Ingredients:</h3>
     <ul>
       <li>2 cups whole wheat flour</li>
@@ -29,15 +36,51 @@
       <li>1 tsp grated ginger</li>
       <li>1 tsp cumin seeds</li>
       <li>1-2 chopped green chilies</li>
-      <li>Salt, garam masala, coriander</li>
+      <li>1/2 tsp red chili powder (optional)</li>
+      <li>1/2 tsp garam masala</li>
+      <li>1/4 tsp turmeric powder</li>
+      <li>2 tbsp chopped fresh coriander leaves</li>
+      <li>Salt to taste</li>
+      <li>Ghee or oil for cooking</li>
+      <li>Water for dough</li>
     </ul>
     <h3>Cooking Process:</h3>
     <ol>
-      <li>Prepare dough using flour and water; rest it.</li>
-      <li>Mix mashed potatoes with spices to create filling.</li>
-      <li>Roll dough ball, stuff with filling, and roll again.</li>
-      <li>Cook on tawa with ghee until golden on both sides.</li>
+      <li><strong>Prepare the Dough:</strong> In a large bowl, add the whole wheat flour and a pinch of salt. Gradually add water and knead to form a smooth, soft dough. Cover the dough with a damp cloth and let it rest for at least 15-20 minutes.</li>
+      <li><strong>Prepare the Filling:</strong> In another bowl, combine the mashed boiled potatoes, grated ginger, cumin seeds, chopped green chilies, red chili powder (if using), garam masala, turmeric powder, chopped coriander leaves, and salt to taste. Mix well until all the ingredients are evenly combined.</li>
+      <li><strong>Stuff the Paranthas:</strong> Divide the dough into equal-sized balls. Take one dough ball and roll it into a small disc (about 3-4 inches in diameter). Place a spoonful of the potato filling in the center of the disc.</li>
+      <li><strong>Seal the Filling:</strong> Bring the edges of the dough disc together and pinch them to seal the filling inside, forming a ball again. Gently flatten the ball with your palms.</li>
+      <li><strong>Roll the Parantha:</strong> Dust a rolling surface with some flour. Carefully roll the stuffed dough ball into a flat, circular parantha (about 6-7 inches in diameter). Be gentle while rolling to avoid tearing the dough.</li>
+      <li><strong>Cook the Parantha:</strong> Heat a flat griddle or tawa over medium heat. Place the rolled parantha on the hot tawa and cook for about 1-2 minutes on each side, or until you see small bubbles appearing.</li>
+      <li><strong>Apply Ghee/Oil:</strong> Drizzle some ghee or oil on both sides of the parantha. Press gently with a spatula and cook until both sides turn golden brown and crispy.</li>
+      <li><strong>Serve:</strong> Remove the aaloo parantha from the tawa and serve hot with butter, yogurt, pickles, or your favorite side dish. Repeat the process with the remaining dough and filling.</li>
     </ol>
+
+    <div class="nutrition-facts">
+      <h4>Nutrition Facts (approx. per parantha):</h4>
+      <ul>
+        <li>Calories: 200-250 kcal</li>
+        <li>Carbohydrates: 30-35g</li>
+        <li>Protein: 5-7g</li>
+        <li>Fat: 8-12g (depending on ghee/oil used)</li>
+        <li>Fiber: 3-4g</li>
+      </ul>
+    </div>
+
+    <br><hr>
+
+    <div class="comments-section">
+      <h4>Comments & Reviews</h4>
+      <div class="comment">
+        <p>Delicious and easy to follow recipe! My family loved it.</p>
+        <p class="author">- Priya Sharma</p>
+      </div>
+      <div class="comment">
+        <p>The paranthas turned out perfect. Thanks for the detailed instructions!</p>
+        <p class="author">- Rohan Verma</p>
+      </div>
+      </div>
   </main>
+  <script src="../../script.js"></script>
 </body>
 </html>
