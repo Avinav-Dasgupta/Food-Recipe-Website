@@ -15,9 +15,12 @@
         <li><a href="recipes.html">Recipes</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search for a recipe..." />
-        <div id="searchResults" class="search-results">
+      <!-- Search Bar -->
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search recipes...">
+  <div id="searchResults" class="search-results"></div>
+</div>
+
         </div>
       </div>
     </nav>
@@ -37,12 +40,22 @@
           <p>Stuffed flatbread made with spiced mashed potatoes. A North Indian classic!</p>
         </div>
 
-        <div class="recipe-card" data-href="recipes/kichdi/kichdi.html" data-title="kichdi">
+        <div
+          class="recipe-card"
+          data-href="recipes/butter-chicken/butter-chicken.html"
+          data-title="butter chicken"
+        >
           <div class="recipe-image-container">
-            <img src="recipes/kichdi/kichdi.jpg" alt="Kichdi">
+            <img
+              src="recipes/butter-chicken/butter-chicken.jpg"
+              alt="Butter Chicken"
+            />
           </div>
-          <h3>Kichdi</h3>
-          <p>Comforting one-pot dish made from rice and lentils. Simple, healthy, and satisfying.</p>
+          <h3>Butter Chicken</h3>
+          <p>
+            Rich and creamy tomato-based chicken curry, a beloved North Indian
+            delicacy.
+          </p>
         </div>
 
         <div class="recipe-card" data-href="recipes/veg-pulao/veg-pulao.html" data-title="veg pulao">
@@ -78,5 +91,9 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="searchData.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/05/06/06/20250506062614-2A9Z8A9D.js"></script>
+    
 </body>
 </html>

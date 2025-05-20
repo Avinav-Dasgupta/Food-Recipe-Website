@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Veg Pulao | CookNest</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
@@ -17,8 +17,10 @@
     </nav>
 
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search for a recipe..." />
-    </div>
+  <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+  <div id="searchResults" class="search-results"></div>
+</div>
+
   </header>
 
   <main>
@@ -83,9 +85,40 @@
         <p>I added some mint leaves for extra flavor and it was delicious!</p>
         <p class="author">- Rajesh Verma</p>
       </div>
-      </div>
+            <form id="commentForm">
+        <label for="commentText">Add a Comment:</label><br>
+        <textarea id="commentText" name="commentText" rows="4" cols="50" placeholder="Write your comment here..." required></textarea><br>
+        <button type="submit">Submit Comment</button>
+      </form>
+    </div>
   </main>
-  <script src="script.js"></script>
-
+  <footer>
+    <p>&copy; 2025 CookNest. All rights reserved.</p>
+  </footer>
+  <script src="../script.js"></script>
+    <script src="../searchData.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/05/06/06/20250506062614-2A9Z8A9D.js"></script>
+<script>
+    // Handle comment submission
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const commentText = document.getElementById('commentText').value.trim();
+      if (commentText) {
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        const p = document.createElement('p');
+        p.textContent = commentText;
+        const author = document.createElement('p');
+        author.classList.add('author');
+        author.textContent = '- Anonymous';
+        commentDiv.appendChild(p);
+        commentDiv.appendChild(author);
+        const commentsSection = document.querySelector('.comments-section');
+        commentsSection.insertBefore(commentDiv, document.getElementById('commentForm'));
+        document.getElementById('commentForm').reset();
+      }
+    });
+  </script>
 </body>
 </html>

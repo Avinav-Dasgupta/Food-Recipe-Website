@@ -1,4 +1,3 @@
-// search.js
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
   const searchResultsDiv = document.getElementById('searchResults');
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Event listener for input changes
+  // Input listener
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.trim();
     if (query.length > 0) {
@@ -52,20 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Hide search results when clicking outside
+  // Click outside hides dropdown
   document.addEventListener('click', (event) => {
     if (!event.target.closest('.search-container')) {
       searchResultsDiv.style.display = 'none';
     }
-  });
-
-  // 🧭 Make recipe cards clickable
-  document.querySelectorAll('.recipe-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const link = card.getAttribute('data-href');
-      if (link) {
-        window.location.href = link;
-      }
-    });
   });
 });

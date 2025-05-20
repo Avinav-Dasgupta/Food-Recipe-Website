@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kichdi | CookNest</title>
-  <link rel="stylesheet" href="../styles.css">
+  <title>Khichdi | CookNest</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
@@ -15,20 +15,20 @@
         <li><a href="../../contact.html">Contact</a></li>
       </ul>
     </nav>
-
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+      <div id="searchResults" class="search-results"></div>
     </div>
   </header>
 
   <main>
-    <h2>Kichdi</h2>
+    <h2>Khichdi</h2>
     <div class="recipe-details">
       <p><strong>Prep Time:</strong> 10 minutes</p>
       <p><strong>Cook Time:</strong> 20 minutes</p>
       <p><strong>Servings:</strong> 2-3</p>
     </div>
-    <img src="kichdi.jpg" alt="Kichdi" width="400">
+    <img src="khichdi.jpg" alt="Khichdi" width="400">
     <h3>Ingredients:</h3>
     <ul>
       <li>1 cup basmati rice (or any short-grain rice)</li>
@@ -55,8 +55,8 @@
       <li><strong>Add Rice and Dal:</strong> Drain the soaked rice and moong dal and add them to the cooker/pot. Sauté for a minute, stirring gently.</li>
       <li><strong>Add Water and Salt:</strong> Add 3-4 cups of water (start with 3 and adjust based on your desired consistency). Add salt to taste.</li>
       <li><strong>Pressure Cook (if using cooker):</strong> Close the lid of the pressure cooker and cook for 3-4 whistles on medium heat. Let the pressure release naturally.</li>
-      <li><strong>Cook in a Pot (if not using cooker):</strong> Bring the mixture to a boil, then reduce the heat to low, cover the pot, and simmer for 15-20 minutes, or until the rice and dal are cooked and the kichdi has reached your desired consistency. Stir occasionally to prevent sticking. Add more water if needed during cooking.</li>
-      <li><strong>Garnish and Serve:</strong> Once cooked, open the cooker/pot. Gently mash some of the kichdi with the back of a spoon for a smoother texture (optional). Garnish with fresh coriander leaves. Serve hot with ghee, yogurt, pickle, or papad.</li>
+      <li><strong>Cook in a Pot (if not using cooker):</strong> Bring the mixture to a boil, then reduce the heat to low, cover the pot, and simmer for 15-20 minutes, or until the rice and dal are cooked and the khichdi has reached your desired consistency. Stir occasionally to prevent sticking. Add more water if needed during cooking.</li>
+      <li><strong>Garnish and Serve:</strong> Once cooked, open the cooker/pot. Gently mash some of the khichdi with the back of a spoon for a smoother texture (optional). Garnish with fresh coriander leaves. Serve hot with ghee, yogurt, pickle, or papad.</li>
     </ol>
 
     <div class="nutrition-facts">
@@ -81,9 +81,43 @@
         <p>I added some vegetables like peas and carrots, and it turned out great!</p>
         <p class="author">- Suresh Kumar</p>
       </div>
-      </div>
+      <!-- New Comment Form -->
+      <form id="commentForm">
+        <label for="commentText">Add a Comment:</label><br>
+        <textarea id="commentText" name="commentText" rows="4" cols="50" placeholder="Write your comment here..." required></textarea><br>
+        <button type="submit">Submit Comment</button>
+      </form>
+    </div>
   </main>
-  <script src="script.js"></script>
 
+  <footer>
+    <p>&copy; 2025 CookNest. All rights reserved.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../searchData.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/05/06/06/20250506062614-2A9Z8A9D.js"></script>
+  <script>
+    // Handle comment submission
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const commentText = document.getElementById('commentText').value.trim();
+      if (commentText) {
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        const p = document.createElement('p');
+        p.textContent = commentText;
+        const author = document.createElement('p');
+        author.classList.add('author');
+        author.textContent = '- Anonymous';
+        commentDiv.appendChild(p);
+        commentDiv.appendChild(author);
+        const commentsSection = document.querySelector('.comments-section');
+        commentsSection.insertBefore(commentDiv, document.getElementById('commentForm'));
+        document.getElementById('commentForm').reset();
+      }
+    });
+  </script>
 </body>
 </html>

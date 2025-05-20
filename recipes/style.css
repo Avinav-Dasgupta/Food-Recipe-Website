@@ -20,6 +20,7 @@ header {
   background-color: #f8c291;
   padding: 20px;
   border-radius: 12px;
+  position: relative; /* Added for positioning dropdown */
 }
 
 header h1 {
@@ -45,9 +46,10 @@ nav a {
   color: #4e342e;
   font-weight: bold;
 }
+
 /* Main content */
 main {
-  max-width: 960px; /* Increased max-width */
+  max-width: 960px;
   margin: 30px auto;
   background-color: #fff;
   padding: 25px;
@@ -143,7 +145,57 @@ li {
   font-size: 0.9em;
 }
 
+/* Comment Form Styling */
+#commentForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#commentForm label {
+  font-weight: bold;
+  color: #bf360c;
+}
+
+#commentText {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ff7043;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+#commentText:focus {
+  outline: none;
+  border-color: #d84315;
+  background-color: #fff3e0;
+}
+
+#commentForm button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #d84315;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#commentForm button:hover {
+  background-color: #bf360c;
+}
+
+/* Search Container */
 .search-container {
+  position: relative;
   margin-top: 15px;
   display: flex;
   justify-content: center;
@@ -156,6 +208,44 @@ li {
   border: 2px solid #ff7043;
   border-radius: 8px;
   font-size: 1em;
+}
+
+/* Search Results Dropdown */
+#searchResults {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-width: 400px;
+  background-color: #fff;
+  /* Removed border */
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#searchResults a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold; /* Made text bold */
+  transition: background-color 0.3s ease;
+}
+
+#searchResults a:hover {
+  background-color: #f9f9f9;
+}
+
+#searchResults div {
+  padding: 10px 15px;
+  color: #777;
+  font-weight: bold; /* Made text bold */
 }
 
 /* Responsive */
@@ -180,4 +270,19 @@ li {
     flex-direction: column;
     gap: 10px;
   }
+
+  .search-container input {
+    width: 80%;
+  }
+
+  #searchResults {
+    width: 80%;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
 }
