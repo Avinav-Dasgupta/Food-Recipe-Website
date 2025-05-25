@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shahi Paneer | CookNest</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1><u>CookNest</u></h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../recipes.html">Recipes</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </header>
+
+  <main>
+    <h2>Shahi Paneer</h2>
+    <div class="recipe-details">
+      <p><strong>Prep Time:</strong> 20 minutes</p>
+      <p><strong>Cook Time:</strong> 25 minutes</p>
+      <p><strong>Servings:</strong> 4</p>
+    </div>
+    <img src="shahi-paneer.jpg" alt="Shahi Paneer" width="400">
+
+    <h3>Ingredients:</h3>
+    <ul>
+      <li>250g paneer, cubed</li>
+      <li>2 tablespoons ghee or oil</li>
+      <li>1 large onion, chopped</li>
+      <li>1 tablespoon ginger-garlic paste</li>
+      <li>2 medium tomatoes, pureed</li>
+      <li>10-12 cashews, soaked</li>
+      <li>1/2 cup milk</li>
+      <li>1/4 cup cream</li>
+      <li>1/2 teaspoon turmeric</li>
+      <li>1/2 teaspoon red chili powder</li>
+      <li>1 teaspoon garam masala</li>
+      <li>1/2 teaspoon cardamom powder</li>
+      <li>1 bay leaf</li>
+      <li>Salt to taste</li>
+      <li>Fresh coriander for garnish</li>
+    </ul>
+
+    <h3>Cooking Process:</h3>
+    <ol>
+      <li>Heat ghee in a pan and add bay leaf and onions. Sauté until golden brown.</li>
+      <li>Add ginger-garlic paste and cook until the raw smell disappears.</li>
+      <li>Add tomato puree and cook until oil separates.</li>
+      <li>Grind soaked cashews into a smooth paste and add it to the pan. Cook for 3-4 minutes.</li>
+      <li>Add turmeric, red chili powder, garam masala, and salt. Mix well.</li>
+      <li>Pour in milk and simmer until the gravy thickens slightly.</li>
+      <li>Add cream and cardamom powder. Stir gently.</li>
+      <li>Add paneer cubes and simmer for 5 minutes on low flame.</li>
+      <li>Garnish with coriander and serve hot with naan or rice.</li>
+    </ol>
+
+    <div class="nutrition-facts">
+      <h4>Nutrition Facts (approx. per serving):</h4>
+      <ul>
+        <li>Calories: 300-350 kcal</li>
+        <li>Carbohydrates: 12-15g</li>
+        <li>Protein: 10-12g</li>
+        <li>Fat: 25-30g</li>
+        <li>Fiber: 2g</li>
+      </ul>
+    </div>
+
+    <br><hr>
+
+    <div class="comments-section">
+      <h4>Comments & Reviews</h4>
+      <div class="comment">
+        <p>So rich and creamy! Loved the balance of spices.</p>
+        <p class="author">- Priya Desai</p>
+      </div>
+      <div class="comment">
+        <p>Turned out delicious and my kids really liked it!</p>
+        <p class="author">- Manish Kapoor</p>
+      </div>
+      <form id="commentForm">
+        <label for="commentText">Add a Comment:</label><br>
+        <textarea id="commentText" name="commentText" rows="4" cols="50" placeholder="Write your comment here..." required></textarea><br>
+        <button type="submit">Submit Comment</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CookNest. All rights reserved.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../searchData.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/05/20/00/20250520004328-AESZRUOZ.js"></script>
+
+  <script>
+    // Handle comment submission
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const commentText = document.getElementById('commentText').value.trim();
+      if (commentText) {
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        const p = document.createElement('p');
+        p.textContent = commentText;
+        const author = document.createElement('p');
+        author.classList.add('author');
+        author.textContent = '- Anonymous';
+        commentDiv.appendChild(p);
+        commentDiv.appendChild(author);
+        const commentsSection = document.querySelector('.comments-section');
+        commentsSection.insertBefore(commentDiv, document.getElementById('commentForm'));
+        document.getElementById('commentForm').reset();
+      }
+    });
+  </script>
+</body>
+</html>

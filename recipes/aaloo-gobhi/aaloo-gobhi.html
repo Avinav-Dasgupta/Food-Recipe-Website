@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aaloo Gobhi | CookNest</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header>
+    <h1><u>CookNest</u></h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../recipes.html">Recipes</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </header>
+
+  <main>
+    <h2>Aaloo Gobhi</h2>
+    <div class="recipe-details">
+      <p><strong>Prep Time:</strong> 15 minutes</p>
+      <p><strong>Cook Time:</strong> 25 minutes</p>
+      <p><strong>Servings:</strong> 4</p>
+    </div>
+    <img src="aaloo-gobhi.jpg" alt="Aaloo Gobhi" width="400" />
+    
+    <h3>Ingredients:</h3>
+    <ul>
+      <li>2 medium potatoes, peeled and diced</li>
+      <li>1 small cauliflower, cut into florets</li>
+      <li>2 tablespoons oil</li>
+      <li>1 teaspoon cumin seeds</li>
+      <li>1 onion, finely chopped</li>
+      <li>1 tomato, chopped</li>
+      <li>1 teaspoon ginger-garlic paste</li>
+      <li>1/2 teaspoon turmeric powder</li>
+      <li>1 teaspoon coriander powder</li>
+      <li>1/2 teaspoon red chili powder</li>
+      <li>Salt to taste</li>
+      <li>Fresh coriander leaves for garnish</li>
+    </ul>
+
+    <h3>Cooking Process:</h3>
+    <ol>
+      <li>Heat oil in a pan. Add cumin seeds and let them splutter.</li>
+      <li>Add chopped onion and sauté until golden brown.</li>
+      <li>Add ginger-garlic paste and cook for a minute.</li>
+      <li>Add chopped tomato and cook until soft.</li>
+      <li>Stir in turmeric, coriander, and red chili powder. Cook for another minute.</li>
+      <li>Add potatoes and cauliflower. Mix well to coat with spices.</li>
+      <li>Cover and cook on low heat for 15–20 minutes, stirring occasionally.</li>
+      <li>Check if vegetables are tender. Add salt and cook uncovered for 5 more minutes to slightly crisp the veggies.</li>
+      <li>Garnish with fresh coriander and serve hot with roti or rice.</li>
+    </ol>
+
+    <div class="nutrition-facts">
+      <h4>Nutrition Facts (approx. per serving):</h4>
+      <ul>
+        <li>Calories: 180-220 kcal</li>
+        <li>Carbohydrates: 25g</li>
+        <li>Protein: 4g</li>
+        <li>Fat: 8g</li>
+        <li>Fiber: 5g</li>
+      </ul>
+    </div>
+
+    <br><hr>
+
+    <div class="comments-section">
+      <h4>Comments & Reviews</h4>
+      <div class="comment">
+        <p>Classic comfort food! Tasted just like home.</p>
+        <p class="author">- Meera Sharma</p>
+      </div>
+      <div class="comment">
+        <p>Simple and flavorful. Perfect weekday meal.</p>
+        <p class="author">- Rahul Verma</p>
+      </div>
+      <form id="commentForm">
+        <label for="commentText">Add a Comment:</label><br />
+        <textarea id="commentText" name="commentText" rows="4" cols="50" placeholder="Write your comment here..." required></textarea><br />
+        <button type="submit">Submit Comment</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CookNest. All rights reserved.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../searchData.js"></script>
+
+  <script>
+    // Handle comment submission
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const commentText = document.getElementById('commentText').value.trim();
+      if (commentText) {
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        const p = document.createElement('p');
+        p.textContent = commentText;
+        const author = document.createElement('p');
+        author.classList.add('author');
+        author.textContent = '- Anonymous';
+        commentDiv.appendChild(p);
+        commentDiv.appendChild(author);
+        const commentsSection = document.querySelector('.comments-section');
+        commentsSection.insertBefore(commentDiv, document.getElementById('commentForm'));
+        document.getElementById('commentForm').reset();
+      }
+    });
+  </script>
+</body>
+</html>
