@@ -1,125 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Khichdi | CookNest</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <header>
-    <h1><u>CookNest</u></h1>
-    <nav>
-      <ul>
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../recipes.html">Recipes</a></li>
-        <li><a href="../../contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search for a recipe..." />
-      <div id="searchResults" class="search-results"></div>
-    </div>
-  </header>
-
-  <main>
-    <h2>Khichdi</h2>
-    <div class="recipe-details">
-      <p><strong>Prep Time:</strong> 10 minutes</p>
-      <p><strong>Cook Time:</strong> 20 minutes</p>
-      <p><strong>Servings:</strong> 2-3</p>
-    </div>
-    <img src="khichdi.jpg" alt="Khichdi" width="400">
-    <h3>Ingredients:</h3>
-    <ul>
-      <li>1 cup basmati rice (or any short-grain rice)</li>
-      <li>1/2 cup yellow moong dal (split and skinned lentils)</li>
-      <li>1 medium onion, finely chopped</li>
-      <li>1 medium tomato, finely chopped</li>
-      <li>1/2 teaspoon turmeric powder</li>
-      <li>1 teaspoon cumin seeds</li>
-      <li>1/2 teaspoon mustard seeds</li>
-      <li>1/4 teaspoon asafoetida (hing)</li>
-      <li>1-2 green chilies, slit (optional)</li>
-      <li>1 inch ginger, grated (optional)</li>
-      <li>2 tablespoons ghee or oil</li>
-      <li>Salt to taste</li>
-      <li>3-4 cups water (adjust as needed)</li>
-      <li>Fresh coriander leaves, for garnish</li>
-    </ul>
-    <h3>Cooking Process:</h3>
-    <ol>
-      <li><strong>Wash and Soak:</strong> Wash the rice and moong dal thoroughly under running water. Soak them together in enough water for at least 15 minutes. This helps them cook faster and become softer.</li>
-      <li><strong>Sauté Aromatics:</strong> Heat ghee or oil in a pressure cooker or a heavy-bottomed pot over medium heat. Add cumin seeds and mustard seeds. Let them splutter.</li>
-      <li><strong>Add Onion and Ginger-Chili:</strong> Add the finely chopped onion and sauté until it turns light golden brown. If using, add the slit green chilies and grated ginger, and sauté for a minute.</li>
-      <li><strong>Add Tomato and Spices:</strong> Add the chopped tomato and cook until it softens. Stir in the turmeric powder and asafoetida. Cook for another minute.</li>
-      <li><strong>Add Rice and Dal:</strong> Drain the soaked rice and moong dal and add them to the cooker/pot. Sauté for a minute, stirring gently.</li>
-      <li><strong>Add Water and Salt:</strong> Add 3-4 cups of water (start with 3 and adjust based on your desired consistency). Add salt to taste.</li>
-      <li><strong>Pressure Cook (if using cooker):</strong> Close the lid of the pressure cooker and cook for 3-4 whistles on medium heat. Let the pressure release naturally.</li>
-      <li><strong>Cook in a Pot (if not using cooker):</strong> Bring the mixture to a boil, then reduce the heat to low, cover the pot, and simmer for 15-20 minutes, or until the rice and dal are cooked and the khichdi has reached your desired consistency. Stir occasionally to prevent sticking. Add more water if needed during cooking.</li>
-      <li><strong>Garnish and Serve:</strong> Once cooked, open the cooker/pot. Gently mash some of the khichdi with the back of a spoon for a smoother texture (optional). Garnish with fresh coriander leaves. Serve hot with ghee, yogurt, pickle, or papad.</li>
-    </ol>
-
-    <div class="nutrition-facts">
-      <h4>Nutrition Facts (approx. per serving):</h4>
-      <ul>
-        <li>Calories: 250-300 kcal</li>
-        <li>Protein: 8-10g</li>
-        <li>Fat: 8-12g (depending on ghee/oil used)</li>
-        <li>Carbohydrates: 40-50g</li>
-        <li>Fiber: 5-7g</li>
-      </ul>
-    </div>
-
-    <br><hr>
-    <div class="comments-section">
-      <h4>Comments & Reviews</h4>
-      <div class="comment">
-        <p>Simple, comforting, and delicious! Perfect for a quick meal.</p>
-        <p class="author">- Neha Gupta</p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Khichdi | CookNest</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <h1><u>CookNest</u></h1>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../recipes.html">Recipes</a></li>
+          <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for a recipe..."
+        />
+        <div id="searchResults" class="search-results"></div>
       </div>
-      <div class="comment">
-        <p>I added some vegetables like peas and carrots, and it turned out great!</p>
-        <p class="author">- Suresh Kumar</p>
+    </header>
+
+    <main>
+      <h2>Khichdi</h2>
+      <div class="recipe-details">
+        <p><strong>Prep Time:</strong> 10 minutes</p>
+        <p><strong>Cook Time:</strong> 20 minutes</p>
+        <p><strong>Servings:</strong> 2-3</p>
       </div>
-      <!-- New Comment Form -->
-      <form id="commentForm">
-        <label for="commentText">Add a Comment:</label><br>
-        <textarea id="commentText" name="commentText" rows="4" cols="50" placeholder="Write your comment here..." required></textarea><br>
-        <button type="submit">Submit Comment</button>
-      </form>
-    </div>
-  </main>
+      <img src="khichdi.jpg" alt="Khichdi" width="400" />
+      <h3>Ingredients:</h3>
+      <ul>
+        <li>1 cup basmati rice (or any short-grain rice)</li>
+        <li>1/2 cup yellow moong dal (split and skinned lentils)</li>
+        <li>1 medium onion, finely chopped</li>
+        <li>1 medium tomato, finely chopped</li>
+        <li>1/2 teaspoon turmeric powder</li>
+        <li>1 teaspoon cumin seeds</li>
+        <li>1/2 teaspoon mustard seeds</li>
+        <li>1/4 teaspoon asafoetida (hing)</li>
+        <li>1-2 green chilies, slit (optional)</li>
+        <li>1 inch ginger, grated (optional)</li>
+        <li>2 tablespoons ghee or oil</li>
+        <li>Salt to taste</li>
+        <li>3-4 cups water (adjust as needed)</li>
+        <li>Fresh coriander leaves, for garnish</li>
+      </ul>
+      <h3>Cooking Process:</h3>
+      <ol>
+        <li>
+          <strong>Wash and Soak:</strong> Wash the rice and moong dal thoroughly
+          under running water. Soak them together in enough water for at least
+          15 minutes. This helps them cook faster and become softer.
+        </li>
+        <li>
+          <strong>Sauté Aromatics:</strong> Heat ghee or oil in a pressure
+          cooker or a heavy-bottomed pot over medium heat. Add cumin seeds and
+          mustard seeds. Let them splutter.
+        </li>
+        <li>
+          <strong>Add Onion and Ginger-Chili:</strong> Add the finely chopped
+          onion and sauté until it turns light golden brown. If using, add the
+          slit green chilies and grated ginger, and sauté for a minute.
+        </li>
+        <li>
+          <strong>Add Tomato and Spices:</strong> Add the chopped tomato and
+          cook until it softens. Stir in the turmeric powder and asafoetida.
+          Cook for another minute.
+        </li>
+        <li>
+          <strong>Add Rice and Dal:</strong> Drain the soaked rice and moong dal
+          and add them to the cooker/pot. Sauté for a minute, stirring gently.
+        </li>
+        <li>
+          <strong>Add Water and Salt:</strong> Add 3-4 cups of water (start with
+          3 and adjust based on your desired consistency). Add salt to taste.
+        </li>
+        <li>
+          <strong>Pressure Cook (if using cooker):</strong> Close the lid of the
+          pressure cooker and cook for 3-4 whistles on medium heat. Let the
+          pressure release naturally.
+        </li>
+        <li>
+          <strong>Cook in a Pot (if not using cooker):</strong> Bring the
+          mixture to a boil, then reduce the heat to low, cover the pot, and
+          simmer for 15-20 minutes, or until the rice and dal are cooked and the
+          khichdi has reached your desired consistency. Stir occasionally to
+          prevent sticking. Add more water if needed during cooking.
+        </li>
+        <li>
+          <strong>Garnish and Serve:</strong> Once cooked, open the cooker/pot.
+          Gently mash some of the khichdi with the back of a spoon for a
+          smoother texture (optional). Garnish with fresh coriander leaves.
+          Serve hot with ghee, yogurt, pickle, or papad.
+        </li>
+      </ol>
 
-  <footer>
-    <p>&copy; 2025 CookNest. All rights reserved.</p>
-  </footer>
+      <div class="nutrition-facts">
+        <h4>Nutrition Facts (approx. per serving):</h4>
+        <ul>
+          <li>Calories: 250-300 kcal</li>
+          <li>Protein: 8-10g</li>
+          <li>Fat: 8-12g (depending on ghee/oil used)</li>
+          <li>Carbohydrates: 40-50g</li>
+          <li>Fiber: 5-7g</li>
+        </ul>
+      </div>
 
-  <script src="../script.js"></script>
-  <script src="../searchData.js"></script>
-  
+      <br />
+      <hr />
+      <div class="comments-section">
+        <h4>Comments & Reviews</h4>
+        <div class="comment">
+          <p>Simple, comforting, and delicious! Perfect for a quick meal.</p>
+          <p class="author">- Neha Gupta</p>
+        </div>
+        <div class="comment">
+          <p>
+            I added some vegetables like peas and carrots, and it turned out
+            great!
+          </p>
+          <p class="author">- Suresh Kumar</p>
+        </div>
+        <!-- New Comment Form -->
+        <form id="commentForm">
+          <label for="commentText">Add a Comment:</label><br />
+          <textarea
+            id="commentText"
+            name="commentText"
+            rows="4"
+            cols="50"
+            placeholder="Write your comment here..."
+            required
+          ></textarea
+          ><br />
+          <button type="submit">Submit Comment</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 CookNest. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../searchData.js"></script>
+
     <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/05/20/00/20250520004328-AESZRUOZ.js"></script>
-    
-  <script>
-    // Handle comment submission
-    document.getElementById('commentForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const commentText = document.getElementById('commentText').value.trim();
-      if (commentText) {
-        const commentDiv = document.createElement('div');
-        commentDiv.classList.add('comment');
-        const p = document.createElement('p');
-        p.textContent = commentText;
-        const author = document.createElement('p');
-        author.classList.add('author');
-        author.textContent = '- Anonymous';
-        commentDiv.appendChild(p);
-        commentDiv.appendChild(author);
-        const commentsSection = document.querySelector('.comments-section');
-        commentsSection.insertBefore(commentDiv, document.getElementById('commentForm'));
-        document.getElementById('commentForm').reset();
-      }
-    });
-  </script>
-</body>
+    <script src="https://files.bpcontent.cloud/2025/05/20/00/20250520004328-AESZRUOZ.js"></script>
+
+    <script>
+      // Handle comment submission
+      document
+        .getElementById("commentForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const commentText = document
+            .getElementById("commentText")
+            .value.trim();
+          if (commentText) {
+            const commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment");
+            const p = document.createElement("p");
+            p.textContent = commentText;
+            const author = document.createElement("p");
+            author.classList.add("author");
+            author.textContent = "- Anonymous";
+            commentDiv.appendChild(p);
+            commentDiv.appendChild(author);
+            const commentsSection = document.querySelector(".comments-section");
+            commentsSection.insertBefore(
+              commentDiv,
+              document.getElementById("commentForm")
+            );
+            document.getElementById("commentForm").reset();
+          }
+        });
+    </script>
+  </body>
 </html>

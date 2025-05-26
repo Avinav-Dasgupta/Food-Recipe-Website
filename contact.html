@@ -1,78 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | CookNest</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1><u>CookNest</u></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search for a recipe..." />
-        <div id="searchResults" class="search-results">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | CookNest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1><u>CookNest</u></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a recipe..."
+          />
+          <div id="searchResults" class="search-results"></div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main>
-    <section class="hero contact-hero">
-      <h2>Contact Us</h2>
-      <p>We'd love to hear from you! Whether you have a recipe to share, a question about our content, or just want to say hello, feel free to reach out.</p>
-    </section>
+    <main>
+      <section class="hero contact-hero">
+        <h2>Contact Us</h2>
+        <p>
+          We'd love to hear from you! Whether you have a recipe to share, a
+          question about our content, or just want to say hello, feel free to
+          reach out.
+        </p>
+      </section>
 
-    <section class="contact-details">
-      <h3>Our Contact Information</h3>
-      <p><strong>Email:</strong> <a href="mailto:avinavdasgupta@amityonline.com">avinavdasgupta@amityonline.com</a></p>
-      <p><strong>Connect with us on social media:</strong></p>
-      <ul class="social-links">
-        <li><a href="https://www.facebook.com/profile.php?id=61576331830263" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
-        <li><a href="https://www.instagram.com/avinav_dasgupta/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://in.pinterest.com/avinavdasgupta0089/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
-      </ul>
-    </section>
+      <section class="contact-details">
+        <h3>Our Contact Information</h3>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:avinavdasgupta@amityonline.com"
+            >avinavdasgupta@amityonline.com</a
+          >
+        </p>
+        <p><strong>Connect with us on social media:</strong></p>
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=61576331830263"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer"
+              >X (Twitter)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/avinav_dasgupta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://in.pinterest.com/avinavdasgupta0089/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pinterest</a
+            >
+          </li>
+        </ul>
+      </section>
 
-    <section class="contact-form">
-      <h3>Send us a Message</h3>
-      <form action="mailto:avinavdasgupta@amityonline.com" method="POST">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject">
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+      <section class="contact-form">
+        <h3>Send us a Message</h3>
+        <form action="mailto:avinavdasgupta@amityonline.com" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 CookNest. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
-  <script src="searchData.js"></script>
-  
+    <footer>
+      <p>&copy; 2025 CookNest. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="searchData.js"></script>
+
     <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/05/20/00/20250520004328-AESZRUOZ.js"></script>
-    
-</body>
+    <script src="https://files.bpcontent.cloud/2025/05/20/00/20250520004328-AESZRUOZ.js"></script>
+  </body>
 </html>

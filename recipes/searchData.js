@@ -11,4 +11,3 @@ const recipes = [
 
   // Add more recipes as needed
 ];
-s

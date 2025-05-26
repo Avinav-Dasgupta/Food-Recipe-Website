@@ -7,7 +7,7 @@
 
 /* Body styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #e6f0f3; /* soft light blue */
   color: #264653; /* dark teal */
@@ -97,7 +97,8 @@ h3 {
   color: #2a9d8f; /* teal */
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 20px;
   margin-top: 10px;
 }
@@ -173,7 +174,7 @@ li {
   border-radius: 8px;
   resize: vertical;
   min-height: 80px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: border-color 0.3s ease;
 }
 
@@ -328,7 +329,8 @@ footer {
     font-size: 0.85em;
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin-left: 15px;
   }
 

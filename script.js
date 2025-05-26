@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  // Function to filter recipes based on search query
+  // Filter recipes based on search query (case insensitive)
   function filterRecipes(query) {
     return recipes.filter(recipe =>
       recipe.title.toLowerCase().includes(query.toLowerCase())
     );
   }
 
-  // Function to display search results
+  // Display filtered search results in dropdown
   function displayResults(results) {
     searchResultsDiv.innerHTML = '';
     if (results.length > 0) {
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('a');
         link.href = result.href;
         link.textContent = result.title;
-        link.style.display = 'block'; // full width clickable
+        link.style.display = 'block';     // full width clickable
         link.style.padding = '12px 15px'; // bigger tap area
-        link.style.fontSize = '1.1em';   // easier to read on mobile
+        link.style.fontSize = '1.1em';    // easier to read on mobile
         link.style.borderBottom = '1px solid #ccc';
         link.style.touchAction = 'manipulation'; // smoother tap
         searchResultsDiv.appendChild(link);
@@ -37,15 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       const noResults = document.createElement('div');
       noResults.textContent = 'No recipes found.';
-      noResults.style.padding = '15px';
-      noResults.style.fontSize = '1.1em';
-      noResults.style.color = '#777';
+      noResults.classList.add('no-results'); // Use CSS class for styling
       searchResultsDiv.appendChild(noResults);
       searchResultsDiv.style.display = 'block';
     }
   }
 
-  // Debounced event listener for input changes (300ms delay)
+  // Handle input changes with debounce for performance
   searchInput.addEventListener('input', debounce(() => {
     const query = searchInput.value.trim();
     if (query.length > 0) {
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 300));
 
-  // Enter key: redirect if exact match
+  // On Enter key, redirect if exact match found
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       const query = searchInput.value.trim().toLowerCase();
@@ -67,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Hide search results when clicking/tapping outside the search container
+  // Hide search results when clicking outside the search container
   document.addEventListener('click', (event) => {
     if (!event.target.closest('.search-container')) {
       searchResultsDiv.style.display = 'none';
     }
   });
 
-  // Make recipe cards clickable (if exists)
+  // Make entire recipe cards clickable via data attribute
   document.querySelectorAll('.recipe-card').forEach(card => {
     card.addEventListener('click', () => {
       const link = card.getAttribute('data-href');
