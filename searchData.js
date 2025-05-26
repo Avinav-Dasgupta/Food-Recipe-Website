@@ -8,6 +8,5 @@ const recipes = [
   { title: "Butter Chicken", href: "recipes/butter-chicken/butter-chicken.html" },
   { title: "Shahi Paneer", href: "recipes/shahi-chicken/shahi-paneer.html" },
   { title: "Aaloo Gobhi", href: "recipes/aaloo-gobhi/aaloo-gobhi.html" },
-
   // Add more recipes as needed
 ];
